@@ -1,18 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delete Account - Trackaroo</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f3ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 15px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 700px;
+      width: 100%;
+      overflow: hidden;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #7b2ff7, #f107a3);
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .header img {
+      width: 80px;
+      height: 80px;
+      background: white;
+      border-radius: 50%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .content {
+      padding: 35px 40px;
+      text-align: center;
+    }
+
+    .content h2 {
+      color: #5a189a;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .content p {
+      color: #444;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #7b2ff7, #f107a3);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background: linear-gradient(135deg, #6c1be6, #d60691);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      padding: 15px 10px 25px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 25px 20px;
+      }
+      .header h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Delete Account Request</h1>
-  <p>If you want to delete your Trackaroo account and all associated data, please email us at:</p>
+  <div class="card">
+    <div class="header">
+      <img src="https://cdn-icons-png.flaticon.com/512/5974/5974771.png" alt="Delete Icon">
+      <h1>Delete Your Trackaroo Account</h1>
+    </div>
 
-  <p><strong>trackarooapp@gmail.com</strong></p>
+    <div class="content">
+      <p>
+        We’re sorry to see you go. Deleting your Trackaroo account will remove all your personal information, including login details and linked school data.  
+        <br><br>
+        Once deleted, your account cannot be recovered.
+      </p>
 
-  <p>Include your registered email ID and account type (Student, Parent, Driver, or Admin) in your request.</p>
+      <p>
+        To permanently delete your account, please send an email to:<br><br>
+        <b>trackaroo.support@gmail.com</b><br><br>
+        Include your registered email ID and reason for deletion.
+      </p>
 
-  <p>Your request will be processed within 7 business days, and all your personal data will be permanently deleted from our servers.</p>
+      <a href="mailto:trackaroo.support@gmail.com?subject=Account%20Deletion%20Request%20-%20Trackaroo" class="button">Request Account Deletion</a>
+    </div>
+
+    <footer>
+      © 2025 Trackaroo | Developed by <b>Yeshvikaa</b>
+    </footer>
+  </div>
 </body>
 </html>
