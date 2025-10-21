@@ -9,92 +9,97 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f5f3ff;
+      background-color: #f3e8ff;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       min-height: 100vh;
       margin: 0;
-      padding: 40px 15px;
+      padding: 30px 15px;
     }
 
-    .card {
-      background: #fff;
+    .container {
+      background: #ffffff;
       border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      max-width: 700px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      max-width: 850px;
       width: 100%;
       overflow: hidden;
-      animation: fadeIn 0.6s ease;
+      animation: fadeIn 0.6s ease-in-out;
     }
 
-    .header {
-      background: linear-gradient(135deg, #7b2ff7, #f107a3);
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: #fff;
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
 
-    .header img {
-      width: 80px;
-      height: 80px;
-      background: white;
-      border-radius: 50%;
-      padding: 10px;
-      margin-bottom: 15px;
+    header h1 {
+      font-size: 30px;
+      font-weight: 600;
+      margin: 0;
     }
 
-    .header h1 {
-      font-size: 28px;
-      margin: 0;
-      font-weight: 600;
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-top: 10px;
     }
 
     .content {
-      padding: 35px 40px;
-      text-align: center;
+      padding: 40px 50px;
     }
 
     .content h2 {
       color: #5a189a;
       margin-top: 0;
-      margin-bottom: 10px;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 600;
     }
 
     .content p {
-      color: #444;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 25px;
       font-size: 15px;
-      line-height: 1.7;
+    }
+
+    .highlight-box {
+      background-color: #f5f0ff;
+      border-left: 5px solid #7b2ff7;
+      padding: 15px 20px;
+      border-radius: 10px;
       margin-bottom: 25px;
     }
 
-    .button {
+    .highlight-box p {
+      margin: 0;
+      color: #444;
+    }
+
+    a.button {
       display: inline-block;
-      padding: 12px 25px;
-      background: linear-gradient(135deg, #7b2ff7, #f107a3);
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: #fff;
-      border: none;
-      border-radius: 30px;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
       text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 500;
       transition: all 0.3s ease;
     }
 
-    .button:hover {
-      background: linear-gradient(135deg, #6c1be6, #d60691);
+    a.button:hover {
       transform: scale(1.05);
+      background: linear-gradient(135deg, #5c0fc0, #1e63e6);
     }
 
     footer {
       text-align: center;
       font-size: 14px;
       color: #777;
-      padding: 15px 10px 25px;
+      padding: 20px 0 30px;
     }
 
     @keyframes fadeIn {
@@ -102,41 +107,58 @@
       to {opacity: 1; transform: translateY(0);}
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .content {
         padding: 25px 20px;
       }
-      .header h1 {
+
+      header h1 {
         font-size: 24px;
+      }
+
+      .content h2 {
+        font-size: 18px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
-      <img src="https://cdn-icons-png.flaticon.com/512/5974/5974771.png" alt="Delete Icon">
-      <h1>Delete Your Trackaroo Account</h1>
-    </div>
+  <div class="container">
+    <header>
+      <h1>Delete Account</h1>
+      <p>We’re sorry to see you go from Trackaroo</p>
+    </header>
 
     <div class="content">
+      <h2>Important Information</h2>
       <p>
-        We’re sorry to see you go. Deleting your Trackaroo account will remove all your personal information, including login details and linked school data.  
-        <br><br>
-        Once deleted, your account cannot be recovered.
+        Deleting your Trackaroo account will permanently remove all your personal details, route data, and linked student or driver information from our system.
       </p>
 
+      <div class="highlight-box">
+        <p><strong>Note:</strong> Once your account is deleted, your data cannot be recovered.</p>
+      </div>
+
+      <h2>How to Request Account Deletion</h2>
       <p>
-        To permanently delete your account, please send an email to:<br><br>
-        <b>trackaroo.support@gmail.com</b><br><br>
-        Include your registered email ID and reason for deletion.
+        To delete your account, please send an email to our support team with the following details:
       </p>
 
-      <a href="mailto:trackaroo.support@gmail.com?subject=Account%20Deletion%20Request%20-%20Trackaroo" class="button">Request Account Deletion</a>
+      <ul>
+        <li>Your registered email ID</li>
+        <li>Your role (Student, Parent, Driver, or Admin)</li>
+        <li>Reason for account deletion (optional)</li>
+      </ul>
+
+      <p>You can send your deletion request to:</p>
+
+      <p><strong>📧 trackaroo.support@gmail.com</strong></p>
+
+      <a href="mailto:trackaroo.support@gmail.com?subject=Account%20Deletion%20Request%20-%20Trackaroo" class="button">Send Deletion Request</a>
     </div>
 
     <footer>
-      © 2025 Trackaroo | Developed by <b>Yeshvikaa</b>
+      © 2025 Trackaroo | Designed & Developed by <b>Yeshvikaa</b>
     </footer>
   </div>
 </body>
